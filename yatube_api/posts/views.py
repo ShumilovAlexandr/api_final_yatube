@@ -48,7 +48,7 @@ class FollowViewSet(viewsets.GenericViewSet, CreateModelMixin, ListModelMixin):
 
 
 class GroupViewSet(viewsets.GenericViewSet, mixins.ListModelMixin,
-                   mixins.RetrieveModelMixin, mixins.CreateModelMixin):
+                   mixins.RetrieveModelMixin):
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
     permission_classes = [IsAuthorOrReadOnly]
